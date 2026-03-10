@@ -1,0 +1,30 @@
+<!--
+  GHL EMBED SNIPPET
+  ─────────────────
+  Paste this ENTIRE block into a "Custom JS/HTML" element in your GHL Funnel/Website page.
+  
+  BEFORE USING:
+  1. Host your Quiz files on Hostinger (or any static/PHP host):
+     - Upload: embed.html, quiz-widget.js, .htaccess, api/ folder
+     - Your Hostinger domain should serve these files
+  2. Replace YOUR_HOSTED_URL below with your actual Hostinger domain
+     Example: https://quiz.traveltotransform.com
+  3. The webhook URLs are already configured inside embed.html
+-->
+
+<!-- Quiz Iframe -->
+<iframe id="ttt-quiz-iframe" src="YOUR_HOSTED_URL/embed.html"
+    style="width:100%; border:none; min-height:700px; overflow:hidden;" scrolling="no" allowfullscreen>
+</iframe>
+
+<!-- Auto-resize script (makes iframe match quiz height) -->
+<script>
+    window.addEventListener('message', function (e) {
+        if (e.data && e.data.type === 'ttt-resize') {
+            var iframe = document.getElementById('ttt-quiz-iframe');
+            if (iframe) {
+                iframe.style.height = e.data.height + 'px';
+            }
+        }
+    });
+</script>

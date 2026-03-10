@@ -1,0 +1,25 @@
+# Netlify configuration for The Traveller DNA Quiz
+
+[build]
+  publish = "."
+
+# Proxy webhook requests to n8n to avoid CORS issues
+# Quiz completion webhook
+[[redirects]]
+  from = "/api/webhook"
+  to = "https://n8n.cvinson.cloud/webhook/be10b2b6-d6ad-4114-aba7-1bb9f8d095fa"
+  status = 200
+  force = true
+
+  [redirects.headers]
+    X-From = "netlify-proxy"
+
+# Sign-up webhook
+[[redirects]]
+  from = "/api/signup-webhook"
+  to = "https://n8n.cvinson.cloud/webhook/d86eb66a-72c0-466c-835f-142b4b8d0005"
+  status = 200
+  force = true
+
+  [redirects.headers]
+    X-From = "netlify-proxy"

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test n8n Webhook</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            background: #f8fafc;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        input[type="url"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background: #6366f1;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #4f46e5;
+        }
+
+        pre {
+            background: #1e293b;
+            color: #f8fafc;
+            padding: 1rem;
+            border-radius: 4px;
+            overflow-x: auto;
+            margin-top: 1rem;
+        }
+
+        #status {
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+
+        .success {
+            color: #10b981;
+        }
+
+        .error {
+            color: #ef4444;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <h1>Test n8n Webhook Payload</h1>
+        <p>Use this tool to simulate a completed quiz and see if your n8n (or GHL/Zapier) webhook "shoots" successfully.
+        </p>
+
+        <label for="webhookUrl">n8n / GHL Webhook URL:</label>
+        <input type="url" id="webhookUrl" placeholder="https://your-n8n-server.com/webhook/..." required>
+
+        <button id="sendBtn" onclick="sendTestPayload()">Send Sample Payload</button>
+
+        <div id="status"></div>
+
+        <h3>Payload being sent:</h3>
+        <pre id="payloadPreview"></pre>
+    </div>
+
+    <script>
+        const samplePayload = {
+            "first_name": "Test",
+            "email": "test@example.com",
+            "phone": "+1234567890",
+            "quiz_result": "The Adventurer",
+            "quiz_result_tagline": "The Purposeful Builder",
+            "quiz_result_emoji": "🎯",
+            "source": "travel-archetype-quiz",
+            "question_1_answer": "Strongly aligns",
+            "question_2_answer": "Somewhat aligns",
+            "question_3_answer": "Slightly aligns",
+            "question_4_answer": "Does not align",
+            "question_5_answer": "Strongly aligns",
+            "question_6_answer": "Somewhat aligns",
+            "question_7_answer": "Strongly aligns",
+            "question_8_answer": "Slightly aligns",
+            "question_9_answer": "Strongly aligns",
+            "question_10_answer": "Somewhat aligns",
+            "score_tourist_pct": "30%",
+            "score_tourist_pts": 5,
+            "score_explorer_pct": "60%",
+            "score_explorer_pts": 7,
+            "score_adventurer_pct": "90%",
+            "score_adventurer_pts": 14,
+            "score_global_citizen_pct": "40%",
+            "score_global_citizen_pts": 6
+        };
+
+        document.getElementById('payloadPreview').textContent = JSON.stringify(samplePayload, null, 2);
+
+        function sendTestPayload() {
+            const url = document.getElementById('webhookUrl').value.trim();
+            const statusEl = document.getElementById('status');
+            const btn = document.getElementById('sendBtn');
+
+            if (!url) {
+                statusEl.textContent = "Please enter a webhook URL.";
+                statusEl.className = "error";
+                return;
+            }
+
+            btn.disabled = true;
+            btn.textContent = "Sending...";
+            statusEl.textContent = "Sending payload...";
+            statusEl.className = "";
+
+            // Determine if it's likely a browser blocking due to CORS
+            fetch(url, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(samplePayload)
+            })
+                .then(async (response) => {
+                    if (response.ok) {
+                        statusEl.textContent = `✅ Success! Status: ${response.status}. Payload successfully "shot" to the Webhook.`;
+                        statusEl.className = "success";
+                    } else {
+                        const text = await response.text();
+                        statusEl.textContent = `❌ Failed! Status: ${response.status}. Msg: ${text}`;
+                        statusEl.className = "error";
+                    }
+                })
+                .catch(err => {
+                    statusEl.textContent = `⚠️ Error! Could not send. Make sure the URL is correct and handles CORS (Cross-Origin Resource Sharing). Details: ${err.message}`;
+                    statusEl.className = "error";
+                    console.error(err);
+                })
+                .finally(() => {
+                    btn.disabled = false;
+                    btn.textContent = "Send Sample Payload";
+                });
+        }
+    </script>
+
+</body>
+
+</html>

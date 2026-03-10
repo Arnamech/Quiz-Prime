@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel to Transform Quiz</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: transparent;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="ttt-quiz-container"></div>
+    <script>
+        // ─── CONFIGURE THESE ───────────────────────────────────────
+        window.TTT_CONFIG = {
+            webhookUrl: '/api/webhook',       // Proxy path (configured in _redirects)
+            masterclassUrl: 'https://www.traveltotransform.com/masterclass'
+        };
+    </script>
+    <script src="quiz-widget.js"></script>
+
+    <!-- Auto-resize: tells GHL iframe parent the correct height -->
+    <script>
+        function sendHeight() {
+            const height = document.documentElement.scrollHeight;
+            window.parent.postMessage({ type: 'ttt-resize', height: height }, '*');
+        }
+        // Send height on load, resize, and periodically (for dynamic content)
+        window.addEventListener('load', sendHeight);
+        window.addEventListener('resize', sendHeight);
+        new MutationObserver(sendHeight).observe(document.body, { childList: true, subtree: true, attributes: true });
+        setInterval(sendHeight, 500);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,232 @@
+{
+  "title": "Travel to Transform: What Kind of Traveller Are You?",
+  "description": "Discover your travel archetype in minutes.",
+  "logoPosition": "right",
+  "pages": [
+    {
+      "name": "page1",
+      "title": "Question 1",
+      "elements": [
+        {
+          "type": "checkbox",
+          "name": "q1",
+          "title": "When you think about travel in your life, which statement resonates most? (Multiple answers allowed)",
+          "choices": [
+            { "value": "tourist",        "text": "A) Travel is my reward after working hard. I'm always finding ways to earn my next escape" },
+            { "value": "explorer",       "text": "B) Travel is how I learn about myself and the world around me" },
+            { "value": "adventurer",     "text": "C) Travel is a strategic tool for creating better life opportunities and breaking free from societal limits" },
+            { "value": "global_citizen", "text": "D) Travel is where I create multiple bases in different countries to create positive impacts as part of my global lifestyle" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "page2",
+      "title": "Question 2",
+      "elements": [
+        {
+          "type": "radiogroup",
+          "name": "q2",
+          "title": "When faced with travel challenges (delays, cultural misunderstandings, plans changing), you most likely:",
+          "choices": [
+            { "value": "tourist",        "text": "A) Feel frustrated and stressed – these things ruin my carefully planned trip" },
+            { "value": "explorer",       "text": "B) See it as part of the exploration and try to learn from the experience" },
+            { "value": "adventurer",     "text": "C) View it as data for optimising future travels and building my longer-term global journey" },
+            { "value": "global_citizen", "text": "D) Flow with it naturally without expectation, knowing deeply that every experience serves my purpose perfectly" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "page3",
+      "title": "Question 3",
+      "elements": [
+        {
+          "type": "radiogroup",
+          "name": "q3",
+          "title": "When looking at your recent travels, which motivation or focus describe them best?",
+          "choices": [
+            { "value": "tourist",        "text": "A) Rest, relaxation, and escaping from daily routine or work stress" },
+            { "value": "explorer",       "text": "B) Learning about other cultures, languages, history, and expanding my worldview" },
+            { "value": "adventurer",     "text": "C) Creating new (business) opportunities, strategic networking, building global communities, or lifestyle design" },
+            { "value": "global_citizen", "text": "D) Genuine service, deep cultural integration, co-creating positive impacts alongside the local communities I visited" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "page4",
+      "title": "Question 4",
+      "elements": [
+        {
+          "type": "radiogroup",
+          "name": "q4",
+          "title": "How do you currently fund your travel experiences?",
+          "choices": [
+            { "value": "tourist",        "text": "A) I save up from my job or business, then allocate a travel budget for vacations/holidays" },
+            { "value": "explorer",       "text": "B) I travel as affordably as possible, sometimes working remotely, doing short-term gigs, or finding creative ways to extend my trips" },
+            { "value": "adventurer",     "text": "C) I have intentionally built flexible income streams to support my travels, or I'm actively working on doing so" },
+            { "value": "global_citizen", "text": "D) My lifestyle, network, and mission are globally integrated and financially sustainable. Travel is part of my daily life and income" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "page5",
+      "title": "Question 5",
+      "elements": [
+        {
+          "type": "radiogroup",
+          "name": "q5",
+          "title": "When it comes to planning travel, what best describes your approach?",
+          "choices": [
+            { "value": "tourist",        "text": "A) I plan thoroughly in advance and feel most comfortable with a structured itinerary" },
+            { "value": "explorer",       "text": "B) I create a loose plan but leave lots of room for spontaneity and unexpected adventures" },
+            { "value": "adventurer",     "text": "C) I plan with specific life and business goals in mind, with each trip serving a deliberate purpose in my bigger vision" },
+            { "value": "global_citizen", "text": "D) Planning feels natural and effortless. My travels are guided by both intuition and purpose, flowing seamlessly with my life mission" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "page6",
+      "title": "Question 6",
+      "elements": [
+        {
+          "type": "radiogroup",
+          "name": "q6",
+          "title": "When you return home after a trip, what do you normally experience?",
+          "choices": [
+            { "value": "tourist",        "text": "A) Post trip blues – I miss being away and feel like I'm back to the daily grind" },
+            { "value": "explorer",       "text": "B) Inspired but slightly unsettled – I want to keep the experience going but don't quite know how" },
+            { "value": "adventurer",     "text": "C) Clarity and momentum – I have lessons to apply and I'm intentionally connecting travel insights to my life and career" },
+            { "value": "global_citizen", "text": "D) Seamlessness – there's very little sense of \"returning home\" because travel and home are integrated parts of my life" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "page7",
+      "title": "Question 7",
+      "elements": [
+        {
+          "type": "radiogroup",
+          "name": "q7",
+          "title": "How do you typically connect with others while travelling?",
+          "choices": [
+            { "value": "tourist",        "text": "A) I mostly travel with family or friends I already know, or I stick to guided group tours" },
+            { "value": "explorer",       "text": "B) I love meeting new people but often feel a gap – most travellers I meet don't have the same depth of curiosity as me" },
+            { "value": "adventurer",     "text": "C) I actively create connections that align with my personal and professional mission, attending events or retreats with like-minded people" },
+            { "value": "global_citizen", "text": "D) Deep, meaningful connections across different cultures come naturally. I am drawn to serve, collaborate, and co-create positive change with others easily" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "page8",
+      "title": "Question 8",
+      "elements": [
+        {
+          "type": "radiogroup",
+          "name": "q8",
+          "title": "Which best describes your current relationship with the idea of \"freedom\"?",
+          "choices": [
+            { "value": "tourist",        "text": "A) Freedom means having time off from work to travel, even if it's just once or twice a year" },
+            { "value": "explorer",       "text": "B) I'm actively seeking more freedom – I want to travel more and break free from the conventional model of work and life" },
+            { "value": "adventurer",     "text": "C) I'm building systems and structures that give me growing freedom – financially, geographically, and in time" },
+            { "value": "global_citizen", "text": "D) I embody freedom. It's not something I seek – I express it through how I live, lead, and contribute to the world" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "page9",
+      "title": "Question 9",
+      "elements": [
+        {
+          "type": "radiogroup",
+          "name": "q9",
+          "title": "What does \"home\" mean to you today?",
+          "choices": [
+            { "value": "tourist",        "text": "A) Home is where I live, where my comfort zone is, and where I return after every trip" },
+            { "value": "explorer",       "text": "B) Home is becoming less of a fixed place – I'm drawn to the idea of feeling at home in multiple cities or countries" },
+            { "value": "adventurer",     "text": "C) I've intentionally created a base that gives me both roots and the freedom to explore. Home is more of a strategic anchor" },
+            { "value": "global_citizen", "text": "D) Home is within me. I feel at ease and at home wherever I am in the world" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "page10",
+      "title": "Question 10",
+      "elements": [
+        {
+          "type": "radiogroup",
+          "name": "q10",
+          "title": "When you think about the impact you want to make through travel, which resonates most?",
+          "choices": [
+            { "value": "tourist",        "text": "A) I mostly think about the personal enjoyment. The biggest impact is on my own mood, health, or energy" },
+            { "value": "explorer",       "text": "B) I want my travels to make me a better, wiser, and more open-minded person who can contribute more at home" },
+            { "value": "adventurer",     "text": "C) My travels are part of a bigger vision to build something meaningful – I want to create real value for others and myself" },
+            { "value": "global_citizen", "text": "D) My life and travels are an expression of positive impact. I'm called to be part of a global movement for conscious change" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "page11",
+      "title": "Question 11",
+      "elements": [
+        {
+          "type": "radiogroup",
+          "name": "q11",
+          "title": "Which of these travel experiences would excite you the most right now?",
+          "choices": [
+            { "value": "tourist",        "text": "A) A well-planned luxury beach resort holiday or a guided cultural tour with all logistics taken care of" },
+            { "value": "explorer",       "text": "B) A solo adventure to an off-the-beaten-path destination with lots of room for spontaneity and cultural discovery" },
+            { "value": "adventurer",     "text": "C) An immersive international retreat or mastermind focused on personal growth and building meaningful global connections" },
+            { "value": "global_citizen", "text": "D) Leading or co-creating a transformative global experience that changes lives – including yours and the participants" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "page12",
+      "title": "Question 12",
+      "elements": [
+        {
+          "type": "radiogroup",
+          "name": "q12",
+          "title": "How aligned do you feel between your travel life and your everyday life?",
+          "choices": [
+            { "value": "tourist",        "text": "A) They feel very separated. Travel is the exciting escape from my everyday life" },
+            { "value": "explorer",       "text": "B) I'm starting to sense a gap and want them to feel more integrated, but I'm not sure how" },
+            { "value": "adventurer",     "text": "C) I've been intentionally bridging them, and they're starting to feel more connected and purposeful" },
+            { "value": "global_citizen", "text": "D) There's no separation. My travel and everyday life are one holistic, joyful expression of who I am" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "page13",
+      "title": "Question 13",
+      "elements": [
+        {
+          "type": "checkbox",
+          "name": "q13",
+          "title": "Finally, what do you most want to gain from your travels going forward? (Multiple answers allowed)",
+          "choices": [
+            { "value": "tourist",        "text": "A) More rest, joy, and time to recharge away from the demands of work and responsibilities" },
+            { "value": "explorer",       "text": "B) Deeper self-awareness, growth, and a clearer sense of who I am and what I want" },
+            { "value": "adventurer",     "text": "C) Greater freedom, sustainable income, meaningful purpose, and an elevated global network" },
+            { "value": "global_citizen", "text": "D) To lead, inspire, and serve at a global level – and to keep expanding into my highest potential on this earth" }
+          ]
+        }
+      ]
+    }
+  ],
+  "showProgressBar": "top",
+  "showQuestionNumbers": "on",
+  "progressBarType": "questions",
+  "completedHtml": "<h3>Calculating your results...</h3>"
+}
