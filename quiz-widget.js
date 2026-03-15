@@ -812,7 +812,7 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.02);
         }
         .ttt-step-number { font-weight: 800; color: var(--primary); font-size: 1.125rem; }
-        .ttt-step-text { size: 0.9375rem; color: var(--text-main); line-height: 1.5; }
+        .ttt-step-text { font-size: 0.9375rem; color: var(--text-main); line-height: 1.5; }
     `;
     document.head.appendChild(style);
 
@@ -834,12 +834,12 @@
                 name: "Stage 1: The Call", tagline: "The Escape Seeker",
                 subtitle: "Travel for relaxation and reward",
                 coreFocus: "Sensing a growing restlessness and inner knowing that your current routine no longer fits who you are becoming.",
-                growthAction: "Start a reflection journal today; document what truly energizes you versus what feels like a heavy, draining obligation.",
+                growthAction: "Start a reflection journal today; document what truly energises you versus what feels like a heavy, draining obligation.",
                 traits: ["Restless", "Curious", "Comfort-seeking", "Safety"],
-                characteristics: "You believe travel is your reward after working hard, and you have earned these escapes. You rely on guidebooks, TripAdvisor, or Instagram for travel decisions, valuing comfort, predictability, and familiar options. You often experience post-trip blues when returning to routine, and you sense there is something more to travel but feels like it's incompatible with current life. Deep down, you dream of travelling more but feel trapped by money, time, or obligations.",
-                preferences: "More towards guided tours, resorts, and package deals. You prefer destinations with good infrastructure and English-speaking populations, often travelling with pre-book to ensure itinerary is well planned. You enjoy hotel amenities over a local restaurant.",
+                characteristics: "You believe travel is your reward after working hard, and you have earned these escapes. You rely on guidebooks, TripAdvisor, or Instagram for travel decisions, valuing comfort, predictability, and familiar options. You often experience post-trip blues when returning to routine, and you sense there is something more to travel but feel like it's incompatible with current life. Deep down, you dream of travelling more but feel trapped by money, time, or obligations.",
+                preferences: "More towards guided tours, resorts, and package deals. You prefer destinations with good infrastructure and English-speaking populations, often pre-booking to ensure the itinerary is well planned. You enjoy hotel amenities over a local restaurant.",
                 mode: "Tasting Freedom", driver: "Escape", mindset: "Reactive", state: '"Life is happening TO ME"',
-                stageInsight: "You are at the beginning of a powerful journey. That longing for \u201cmore\u201d is your wisdom calling you forward. You want permission to want something different from your daily mundane, and you deserve to know that a freedom lifestyle is genuinely possible for someone like you. The biggest mistake most people made is to wait until retirement or saved \u201cenough\u201d. There are easier, smarter ways in our modern day today to make travel sustainable and meaningful, starting from exactly where you are right now.",
+                stageInsight: "You are at the beginning of a powerful journey. That longing for \u201cmore\u201d is your wisdom calling you forward. You want permission to want something different from your daily mundane, and you deserve to know that a freedom lifestyle is genuinely possible for someone like you. The biggest mistake most people make is waiting until retirement or saving \u201cenough\u201d. There are easier, smarter ways in our modern day today to make travel sustainable and meaningful, starting from exactly where you are right now.",
                 theme: null,
                 evolution: "Consider stepping slightly outside your comfort zone on your next trip. Try exploring a local place not mentioned in guidebooks, or spend a day without a rigid itinerary. Start journaling about what you discover beyond the typical tourist experiences, and what you've learned about yourself through the trip.",
                 nextSteps: [
@@ -896,10 +896,10 @@
                 coreFocus: "Embodying your hard-won wisdom to create lasting impact while maintaining a life of total freedom and conscious contribution.",
                 growthAction: "Share a pivotal lesson from your journey with someone who is just starting their own path toward transformational growth.",
                 traits: ["Wisdom", "Leadership", "Vision-led", "Mastery"],
-                characteristics: "You believe travel transforms all areas of life and it has become a natural expression of who you are becoming and how you lead. You are an integrated travel master. You don't believe there's separation in travel and life anymore; they are holistic and sustainable. You can feel at home anywhere because you are at home within yourself. Travel unlocks more financial growth and soulful connections, and you know how to open synchronistic opportunities wherever you go. Your passion lies in making positive impacts and helping others becoming better.",
+                characteristics: "You believe travel transforms all areas of life and it has become a natural expression of who you are becoming and how you lead. You are an integrated travel master. You don't believe there's separation in travel and life anymore; they are holistic and sustainable. You can feel at home anywhere because you are at home within yourself. Travel unlocks more financial growth and soulful connections, and you know how to open synchronistic opportunities wherever you go. Your passion lies in making positive impacts and helping others become better.",
                 preferences: "Beyond regular trips and international events, you're drawn to speaking engagements, leading workshops or retreats, and collaborating with fellow changemakers. Your travel choices are both purposeful and intuitive\u2014each journey supporting your conscious evolution from the inside-out. You aspire to cultivate both a nourishing home base and meaningful global travels, chosen with alignment.",
                 mode: "Becoming Freedom", driver: "Lifestyle", mindset: "Intuitive & Integral", state: '"Life is happening AS ME"',
-                stageInsight: "You have arrived integration\u2014embodying freedom across different areas of life. The world needs what you have learned, and it is time to leave your legacy. You deserve collaborators who match your level of consciousness, as well as mentors and coaches to support your next level of expansion. The global community you seek to contribute to and grow alongside already exists. Your highest potential as a global citizen is ready to be unleashed, creating total freedom (Financial, Emotional, Location and Time), alongside your deeper purpose on this earth.",
+                stageInsight: "You have arrived at integration\u2014embodying freedom across different areas of life. The world needs what you have learned, and it is time to leave your legacy. You deserve collaborators who match your level of consciousness, as well as mentors and coaches to support your next level of expansion. The global community you seek to contribute to and grow alongside already exists. Your highest potential as a global citizen is ready to be unleashed, creating total freedom (Financial, Emotional, Location and Time), alongside your deeper purpose on this earth.",
                 theme: '"How do I make the world a better place through travel?"',
                 evolution: 'What is the biggest obstacle currently slowing you from getting to where you want to be? Ask yourself what lesson you are meant to learn here. Envision your ideal day once you have achieved and manifested your highest vision\u2014from there, instead of asking "how", ask "who"\u2014who can walk alongside you, reflect your blind spots, and support your next level of expansion?',
                 nextSteps: [
@@ -935,7 +935,7 @@
             },
             {
                 category: "SECTION 1: TRANSFORM GLOBAL MINDSET",
-                text: "When looking at your recent travels, which motivation or focus describe them best?",
+                text: "When looking at your recent travels, which motivation or focus describes them best?",
                 options: [
                     { label: "I travel to enjoy my holidays and take a break from everyday stress", stageId: 'tourist', points: 8 },
                     { label: "I travel to learn more about the world and cultures – it's all about discovering new things", stageId: 'explorer', points: 8 },
@@ -1018,7 +1018,7 @@
                     { label: "It's how I reward myself and take breaks from real life", stageId: 'tourist', points: 8 },
                     { label: "It's helping me discover who I am and what I want from life", stageId: 'explorer', points: 8 },
                     { label: "It's part of my path to building a global life while being able to serve others", stageId: 'adventurer', points: 8 },
-                    { label: "It's integral to my purpose and contribution – I transform others through travel and passionate about making the world a better place", stageId: 'global_citizen', points: 8 }
+                    { label: "It's integral to my purpose and contribution – I transform others through travel and am passionate about making the world a better place", stageId: 'global_citizen', points: 8 }
                 ]
             },
             {
@@ -1043,12 +1043,12 @@
             },
             {
                 category: "SECTION 4: PURPOSE DRIVEN JOURNEYS",
-                text: "When you imagine your ideal travel lifestyle, what element excites you the most:",
+                text: "When you imagine your ideal travel lifestyle, what element excites you the most?",
                 options: [
                     { label: "Relaxing time at a beautiful location that's safe and easy to navigate", stageId: 'tourist', points: 8 },
                     { label: "Freedom to explore and learn in any country and expand my worldview", stageId: 'explorer', points: 8 },
                     { label: "Personalised trips that combine my passions and skills that'd yield more success in life", stageId: 'adventurer', points: 8 },
-                    { label: "Travelling whenever I want, however I want, while making a positive impact to others or uplifting humanity", stageId: 'global_citizen', points: 8 }
+                    { label: "Travelling whenever I want, however I want, while making a positive impact on others or uplifting humanity", stageId: 'global_citizen', points: 8 }
                 ]
             }
         ]
