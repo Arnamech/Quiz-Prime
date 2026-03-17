@@ -1086,12 +1086,24 @@
         clearState(false);
         initWelcomeScreen();
         showView('ttt-view-welcome');
+
+        // Scroll to the top of the quiz
+        const container = document.getElementById('ttt-quiz-container');
+        if (container) {
+            container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
     };
 
     window.tttRetakeQuiz = function () {
         clearState(true); // Keep user info
         renderQuestion();
         showView('ttt-view-quiz');
+
+        // Scroll to the top of the quiz
+        const container = document.getElementById('ttt-quiz-container');
+        if (container) {
+            container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
     };
 
     // Data Transmission (GHL, n8n, Zapier)
