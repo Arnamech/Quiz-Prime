@@ -833,81 +833,49 @@
                 id: 'tourist', emoji: '\uD83C\uDFD6\uFE0F',
                 name: "Stage 1: The Call", tagline: "The Escape Seeker",
                 subtitle: "Travel for relaxation and reward",
-                coreFocus: "Sensing a growing restlessness and inner knowing that your current routine no longer fits who you are becoming.",
-                growthAction: "Start a reflection journal today; document what truly energises you versus what feels like a heavy, draining obligation.",
                 traits: ["Restless", "Curious", "Comfort-seeking", "Safety"],
                 characteristics: "You believe travel is your reward after working hard, and you have earned these escapes. You rely on guidebooks, TripAdvisor, or Instagram for travel decisions, valuing comfort, predictability, and familiar options. You often experience post-trip blues when returning to routine, and you sense there is something more to travel but feel like it's incompatible with current life. Deep down, you dream of travelling more but feel trapped by money, time, or obligations.",
                 preferences: "More towards guided tours, resorts, and package deals. You prefer destinations with good infrastructure and English-speaking populations, often pre-booking to ensure the itinerary is well planned. You enjoy hotel amenities over a local restaurant.",
                 mode: "Tasting Freedom", driver: "Escape", mindset: "Reactive", state: '"Life is happening TO ME"',
                 stageInsight: "You are at the beginning of a powerful journey. That longing for \u201cmore\u201d is your wisdom calling you forward. You want permission to want something different from your daily mundane, and you deserve to know that a freedom lifestyle is genuinely possible for someone like you. The biggest mistake most people make is waiting until retirement or saving \u201cenough\u201d. There are easier, smarter ways in our modern day today to make travel sustainable and meaningful, starting from exactly where you are right now.",
                 theme: null,
-                evolution: "Consider stepping slightly outside your comfort zone on your next trip. Try exploring a local place not mentioned in guidebooks, or spend a day without a rigid itinerary. Start journaling about what you discover beyond the typical tourist experiences, and what you've learned about yourself through the trip.",
-                nextSteps: [
-                    "Audit your weekly calendar and highlight every activity that feels like an 'obligation' versus an 'inspiration'.",
-                    "Identify one small interest you've been suppressing and spend 30 minutes exploring it this weekend.",
-                    "Write down the top three fears that arise when you think about changing your current life patterns.",
-                    "Watch the Masterclass to see how others have successfully navigated this initial call to adventure."
-                ]
+                evolution: "Consider stepping slightly outside your comfort zone on your next trip. Try exploring a local place not mentioned in guidebooks, or spend a day without a rigid itinerary. Start journaling about what you discover beyond the typical tourist experiences, and what you've learned about yourself through the trip."
             },
             {
                 id: 'explorer', emoji: '\uD83E\uDDED',
                 name: "Stage 2: The Departure", tagline: "The Self-Discoverer",
                 subtitle: "Travel for discovery and learning",
-                coreFocus: "Stepping beyond the familiar to test new boundaries and actively building the bridge to your desired future self.",
-                growthAction: "Commit to one bold lifestyle experiment this week that aligns with your vision of a freedom-based, location-independent life.",
                 traits: ["Independent", "Open Minded", "Growth-Seeking", "Self-motivated"],
                 characteristics: 'You believe travel is the best way to learn and grow, and it genuinely changes who you are through new experiences. You have experienced solo travel or extended trips, mixing planned and spontaneous approaches. The world has become your classroom and you are actively redefining societal limits. You return from trips inspired but often unsure how to maintain that feeling back home, feeling your "travel life" is separated from "real life". You are exploring options like moving to a new country, remote work, digital nomadism, etc.',
                 preferences: "Your planning style is flexible with room for spontaneity. You enjoy a mix of researched cultural immersions and off-the-beaten-path destinations. You travel solo or open to meet like-minded travellers who share your curiosity because they feel more aligned than your peers back home who don't understand you. Other than good rating hotels, you also explore local stays, Airbnbs, or hostels.",
                 mode: "Seeking Freedom", driver: "Discovery", mindset: "Willful", state: '"Life is happening BY ME"',
                 stageInsight: "You have crossed a threshold most tourists never do. You know travel changes you for the better, and you want this freedom to be longer-term, not one-offs here and there. You deserve to travel more meaningfully without constantly worrying about money, logistics or cultural navigation. The proven roadmap you are seeking for exists—without needing trial-and-error anymore. You can build a sustainable travel life that works for your circumstances when you have the right blueprint.",
                 theme: '"How do I travel more frequently and meaningfully?"',
-                evolution: 'Reflect how your last transformative trip changed a specific belief inside you, and understand what\'s your deeper "why" to travel before your next trip. Map out more clarity what your dream life with more travels looks & feels like and how the next destination could help one step closer.',
-                nextSteps: [
-                    "Select one high-impact skill (e.g., digital marketing, remote collaboration) and dedicate 5 hours to learning its basics.",
-                    "Join a community of digital nomads or purpose-driven entrepreneurs to find peers who are on a similar path.",
-                    "Draft a 'leap plan' that outlines exactly what needs to happen for you to make your next major transition.",
-                    "Attend the Masterclass to learn the specific frameworks for making your departure sustainable and successful."
-                ]
+                evolution: 'Reflect how your last transformative trip changed a specific belief inside you, and understand what\'s your deeper "why" to travel before your next trip. Map out more clarity what your dream life with more travels looks & feels like and how the next destination could help one step closer.'
             },
             {
                 id: 'adventurer', emoji: '\uD83C\uDFAF',
                 name: "Stage 3: The Trials", tagline: "The Purposeful Builder",
                 subtitle: "Using travel to create a better life by design",
-                coreFocus: "Navigating deep internal shifts and external setbacks while forging the resilience needed to sustain your new way of living.",
-                growthAction: "Identify your biggest current obstacle and reframe it as essential data for refining your long-term strategy and inner strength.",
                 traits: ["Intentional", "Courageous", "Purpose-seeking", "High-Achieving"],
                 characteristics: "You believe travel with intention leads to better life opportunities and have started approaching it strategically rather than accidentally. Your work and travel are beginning to combine, and you care about creating positive impacts. You have achieved outward success, but deep down something is still missing no matter how many countries you've visited. Cultural navigation is now second nature for you and you enjoy being around like-minded community. Yet despite all your self-improvement work, you're still searching for deeper meaning in all of this.",
                 preferences: "Besides regular trips, you are likely also incorporating strategic relocations, nomad/expat gatherings, personal growth events, and retreats. You craft unique adventures\u2014open to any country that aligns with your personal goals. You choose accommodation for networking or quality experience. Your travel companions or community tend to be deeper connections met overseas, or travellers who share similar mindset that elevates you.",
                 mode: "Building Freedom", driver: "Impact", mindset: "Intellectual", state: '"Life is happening THROUGH ME"',
                 stageInsight: "You understand travel is more than escapes and have been intentionally designing your life differently. You\u2019re eager to break free from the matrix and discover the deeper meaning in your journeys. The clarity you seek is closer than you think\u2014faster results are possible after all the self-improvement work you\u2019ve invested. The breakthrough you need isn\u2019t about more information; it\u2019s about the creating the blueprint and transformation that can help you bend time and achieve in months what would take years alone.",
                 theme: '"What\'s my deeper purpose behind all these travels?"',
-                evolution: 'Audit your whole travel and life journey honestly: Why it brought you here? Instead of asking "where should I go next?", ask "who do I want to become?" From now on, explore how each destination reflects your core values, curiosities, and personal vision. The answers you\'re seeking aren\'t found by travelling more, but within you. Unlock them through "travelling inwards" (intentional inner work).',
-                nextSteps: [
-                    "Practice a daily mindfulness or grounding ritual to maintain clarity during moments of high stress or uncertainty.",
-                    "Seek a mentor or coach who can provide an outside perspective on your current bottlenecks and blind spots.",
-                    "Document your 'wins' weekly, no matter how small, to build momentum and reinforce your new identity.",
-                    "Join the Masterclass to discover the advanced strategies for overcoming the specific plateaus common in Stage 3."
-                ]
+                evolution: 'Audit your whole travel and life journey honestly: Why it brought you here? Instead of asking "where should I go next?", ask "who do I want to become?" From now on, explore how each destination reflects your core values, curiosities, and personal vision. The answers you\'re seeking aren\'t found by travelling more, but within you. Unlock them through "travelling inwards" (intentional inner work).'
             },
             {
                 id: 'global_citizen', emoji: '\uD83C\uDF0D',
                 name: "Stage 4: The Return", tagline: "The Global Changemaker",
                 subtitle: "Travel as a way of living, evolving, and transforming others",
-                coreFocus: "Embodying your hard-won wisdom to create lasting impact while maintaining a life of total freedom and conscious contribution.",
-                growthAction: "Share a pivotal lesson from your journey with someone who is just starting their own path toward transformational growth.",
                 traits: ["Wisdom", "Leadership", "Vision-led", "Mastery"],
                 characteristics: "You believe travel transforms all areas of life and it has become a natural expression of who you are becoming and how you lead. You are an integrated travel master. You don't believe there's separation in travel and life anymore; they are holistic and sustainable. You can feel at home anywhere because you are at home within yourself. Travel unlocks more financial growth and soulful connections, and you know how to open synchronistic opportunities wherever you go. Your passion lies in making positive impacts and helping others become better.",
                 preferences: "Beyond regular trips and international events, you're drawn to speaking engagements, leading workshops or retreats, and collaborating with fellow changemakers. Your travel choices are both purposeful and intuitive\u2014each journey supporting your conscious evolution from the inside-out. You aspire to cultivate both a nourishing home base and meaningful global travels, chosen with alignment.",
                 mode: "Becoming Freedom", driver: "Lifestyle", mindset: "Intuitive & Integral", state: '"Life is happening AS ME"',
                 stageInsight: "You have arrived at integration\u2014embodying freedom across different areas of life. The world needs what you have learned, and it is time to leave your legacy. You deserve collaborators who match your level of consciousness, as well as mentors and coaches to support your next level of expansion. The global community you seek to contribute to and grow alongside already exists. Your highest potential as a global citizen is ready to be unleashed, creating total freedom (Financial, Emotional, Location and Time), alongside your deeper purpose on this earth.",
                 theme: '"How do I make the world a better place through travel?"',
-                evolution: 'What is the biggest obstacle currently slowing you from getting to where you want to be? Ask yourself what lesson you are meant to learn here. Envision your ideal day once you have achieved and manifested your highest vision\u2014from there, instead of asking "how", ask "who"\u2014who can walk alongside you, reflect your blind spots, and support your next level of expansion?',
-                nextSteps: [
-                    "Identify a platform or community where you can share your story and mentor others who are beginning their journey.",
-                    "Look for collaborative opportunities with other Stage 4 leaders to amplify your collective impact and global reach.",
-                    "Review your lifestyle architecture to ensure it continues to support your highest level of contribution and personal growth.",
-                    "Connect with our Masterclass community to explore high-level partnership and contribution opportunities."
-                ]
+                evolution: 'What is the biggest obstacle currently slowing you from getting to where you want to be? Ask yourself what lesson you are meant to learn here. Envision your ideal day once you have achieved and manifested your highest vision\u2014from there, instead of asking "how", ask "who"\u2014who can walk alongside you, reflect your blind spots, and support your next level of expansion?'
             }
         ],
         questions: [
@@ -1646,34 +1614,7 @@
         setTimeout(() => {
             const resView = document.getElementById('ttt-view-results');
 
-            // 1. Personalized Insights Generation
-            let personalizedInsightHTML = '';
-            const topTwo = results.slice(0, 2);
-            const scoreDiff = topTwo[0].percentage - topTwo[1].percentage;
-
             const traitName = (id) => ({ tourist: 'The Tourist', explorer: 'The Explorer', adventurer: 'The Adventurer', global_citizen: 'The Global Citizen' }[id] || id);
-
-            if (scoreDiff <= 5) {
-                personalizedInsightHTML = `
-                    <div class="ttt-insight-card" style="grid-column: span 2; border-left-color: #f59e0b;">
-                        <div class="ttt-insight-card-h">📊 Specialized Insight: Powerful Transition</div>
-                        <p>Your scores indicate you are in a high-growth transition between <strong>${traitName(topTwo[0].id)}</strong> and <strong>${traitName(topTwo[1].id)}</strong>. You are successfully maintaining the strengths of your previous stage while actively integrating the leadership qualities of the next. This balance is your greatest competitive advantage right now.</p>
-                    </div>`;
-            } else if (primaryResult.percentage >= 70) {
-                personalizedInsightHTML = `
-                    <div class="ttt-insight-card" style="grid-column: span 2; border-left-color: #10b981;">
-                        <div class="ttt-insight-card-h">📊 Specialized Insight: Profile Mastery</div>
-                        <p>With a ${primaryResult.percentage}% alignment, you have achieved significant mastery as <strong>${traitName(winner.id)}</strong>. You have internalized its core psychological shifts. Your next evolution lies not in doing more, but in subtly shifting your perspective toward the themes of the next stage to unlock your next level of freedom.</p>
-                    </div>`;
-            } else {
-                const growthStage = results.find(r => r.percentage < 20) || results[results.length - 1];
-                const growthStageData = QUIZ_DATA.stages.find(s => s.id === growthStage.id);
-                personalizedInsightHTML = `
-                    <div class="ttt-insight-card" style="grid-column: span 2; border-left-color: #6366f1;">
-                        <div class="ttt-insight-card-h">📊 Specialized Insight: Growth Opportunity</div>
-                        <p>While you resonate most with <strong>${traitName(winner.id)}</strong>, your lowest alignment is with <strong>${traitName(growthStageData.id)}</strong> (${growthStage.percentage}%). This identifies a "blind spot" in your current roadmap. Exploring the core focus of ${traitName(growthStageData.id)} could provide the missing piece needed to accelerate your overall personal transformation.</p>
-                    </div>`;
-            }
 
             // 2. Profile Cards Breakdown
             let profileCardsHTML = '';
@@ -1697,12 +1638,33 @@
                             <div class="ttt-profile-detail-body">
                                 <div class="ttt-detail-section-h">🔍 Core Characteristics</div>
                                 <p class="ttt-detail-text">${stageFull.characteristics}</p>
-                                <div class="ttt-detail-section-h">🏷️ Traits</div>
+                                <div class="ttt-detail-section-h">🏷️ Your Traveller Traits</div>
                                 <p class="ttt-detail-text" style="font-weight: 600;">${stageFull.traits.join(' • ')}</p>
-                                <div class="ttt-detail-section-h">🎯 Core Focus</div>
-                                <p class="ttt-detail-text">${stageFull.coreFocus}</p>
-                                <div class="ttt-detail-section-h">💪 Immediate Growth Action</div>
-                                <p class="ttt-detail-text">${stageFull.growthAction}</p>
+                                <div class="ttt-detail-section-h">✈️ Travel Preferences</div>
+                                <p class="ttt-detail-text">${stageFull.preferences}</p>
+                                <div class="ttt-detail-section-h">🧠 Your Primary Operating Mode</div>
+                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 8px 0;">
+                                    <div style="background: var(--background-alt); padding: 8px 12px; border-radius: var(--radius-md); border-left: 3px solid var(--primary);">
+                                        <div style="font-size: 0.65rem; color: var(--text-muted);">Mode</div>
+                                        <div style="font-weight: 700; font-size: 0.875rem;">${stageFull.mode}</div>
+                                    </div>
+                                    <div style="background: var(--background-alt); padding: 8px 12px; border-radius: var(--radius-md); border-left: 3px solid var(--primary);">
+                                        <div style="font-size: 0.65rem; color: var(--text-muted);">Primary Driver</div>
+                                        <div style="font-weight: 700; font-size: 0.875rem;">${stageFull.driver}</div>
+                                    </div>
+                                    <div style="background: var(--background-alt); padding: 8px 12px; border-radius: var(--radius-md); border-left: 3px solid var(--primary);">
+                                        <div style="font-size: 0.65rem; color: var(--text-muted);">Operating Mindset</div>
+                                        <div style="font-weight: 700; font-size: 0.875rem;">${stageFull.mindset}</div>
+                                    </div>
+                                    <div style="background: var(--background-alt); padding: 8px 12px; border-radius: var(--radius-md); border-left: 3px solid var(--primary);">
+                                        <div style="font-size: 0.65rem; color: var(--text-muted);">State of Living</div>
+                                        <div style="font-weight: 700; font-size: 0.875rem;">${stageFull.state}</div>
+                                    </div>
+                                </div>
+                                <div class="ttt-detail-section-h">💡 Your Personalised Journey Insights</div>
+                                <p class="ttt-detail-text" style="margin-bottom: 8px;"><strong>🌟 About Your Stage:</strong> ${stageFull.stageInsight}</p>
+                                ${stageFull.theme ? `<p class="ttt-detail-text" style="margin-bottom: 8px;"><strong>🗺️ Main Theme to Explore:</strong> <em style="color: var(--primary);">${stageFull.theme}</em></p>` : ''}
+                                <p class="ttt-detail-text"><strong>🚀 Your Next Evolution:</strong> ${stageFull.evolution}</p>
                             </div>
                         </div>
                     </div>
@@ -1716,28 +1678,16 @@
                     <span class="ttt-hero-emoji">${winner.emoji}</span>
                     <div class="ttt-hero-name">${winner.emoji} The ${winner.id === 'tourist' ? 'Tourist' : winner.id === 'explorer' ? 'Explorer' : winner.id === 'adventurer' ? 'Adventurer' : 'Global Citizen'}: ${winner.tagline}</div>
                     <div class="ttt-hero-subtitle">${winner.subtitle}</div>
-                    <div class="ttt-trait-container">
-                        ${winner.traits.map(t => `<span class="ttt-trait-tag">${t}</span>`).join('')}
-                    </div>
-                </div>
-
-                <div class="ttt-focus-grid">
-                    <div class="ttt-focus-card">
-                        <div class="ttt-focus-label">🎯 Core Focus</div>
-                        <div class="ttt-focus-text">${winner.coreFocus}</div>
-                    </div>
-                    <div class="ttt-focus-card">
-                        <div class="ttt-focus-label">🚀 Growth Action</div>
-                        <div class="ttt-focus-text">${winner.growthAction}</div>
-                    </div>
                 </div>
 
                 <div class="ttt-guidance-card">
-                    <div class="ttt-guidance-h">🧭 Core Characteristics</div>
+                    <div class="ttt-guidance-h">🔍 Core Characteristics</div>
                     <p class="ttt-guidance-p">${winner.characteristics}</p>
 
-                    <div class="ttt-guidance-h">🎽 Your Traveller Traits</div>
-                    <p class="ttt-guidance-p" style="font-size: 1.1rem; font-weight: 600;">${winner.traits.join(' • ')}</p>
+                    <div class="ttt-guidance-h">🏷️ Your Traveller Traits</div>
+                    <div class="ttt-trait-container" style="justify-content: flex-start; margin-bottom: var(--sp-lg); margin-top: 8px;">
+                        ${winner.traits.map(t => `<span class="ttt-trait-tag">${t}</span>`).join('')}
+                    </div>
 
                     <div class="ttt-guidance-h">✈️ Travel Preferences</div>
                     <p class="ttt-guidance-p">${winner.preferences}</p>
@@ -1766,35 +1716,17 @@
                 <div class="ttt-guidance-card">
                     <div class="ttt-guidance-h">💡 Your Personalised Journey Insights</div>
 
-                    <div class="ttt-guidance-h" style="font-size: 1.1rem;">🌟 About ${traitName(winner.id)}</div>
+                    <div class="ttt-guidance-h" style="font-size: 1.1rem; margin-top: 16px;">🌟 About Your Stage</div>
                     <p class="ttt-guidance-p">${winner.stageInsight}</p>
 
-                    ${winner.theme ? `<div class="ttt-guidance-h" style="font-size: 1.1rem;">🗺️ Main Theme to Explore</div>
+                    ${winner.theme ? `<div class="ttt-guidance-h" style="font-size: 1.1rem; margin-top: 16px;">🗺️ Main Theme to Explore</div>
                     <p class="ttt-guidance-p" style="font-style: italic; font-size: 1.1rem; color: var(--primary);">${winner.theme}</p>` : ''}
 
-                    <div class="ttt-guidance-h" style="font-size: 1.1rem;">🚀 Your Next Evolution</div>
+                    <div class="ttt-guidance-h" style="font-size: 1.1rem; margin-top: 16px;">🚀 Your Next Evolution</div>
                     <p class="ttt-guidance-p">${winner.evolution}</p>
-
-                    <div class="ttt-guidance-h">⚡ Your Next Steps</div>
-                    <div class="ttt-next-steps-list">
-                        ${winner.nextSteps.map((step, i) => `
-                            <div class="ttt-next-step-item">
-                                <div class="ttt-step-number">${i + 1}</div>
-                                <div class="ttt-step-text">${step}</div>
-                            </div>
-                        `).join('')}
-                    </div>
                 </div>
 
-                <div class="ttt-insights-container">
-                    <div class="ttt-section-title">Specialized Journey Insights</div>
-                    <div class="ttt-title-dash"></div>
-                    <div class="ttt-insights-grid">
-                        ${personalizedInsightHTML}
-                    </div>
-                </div>
-
-                <div class="ttt-section-card" style="margin-top: 48px;">
+                <div class="ttt-section-card">
                     <div class="ttt-section-title">Your Complete Journey Profile</div>
                     <p style="text-align:center; color: var(--text-muted); margin-bottom: 24px; font-size: 0.875rem;">Your dominant type is ${primaryResult.percentage}%. See how you align with all four traveller types.</p>
                     ${profileCardsHTML}
@@ -1802,9 +1734,9 @@
 
                 <div class="ttt-cta-box">
                     <div class="ttt-cta-eyebrow">📍 Next Step: Watch Our FREE Masterclass</div>
-                    <div class="ttt-cta-title">Learn more about your traveller type</div>
+                    <div class="ttt-cta-title">Learn more about your travel stage—see the full roadmap and how to apply it before your next trip.</div>
                     <p class="ttt-cta-sub">
-                        Learn more about your freedom to be longer-term, not one-offs here and there. You deserve to travel more meaningfully without constantly worrying about money, logistics or cultural navigation. The proven roadmap you are seeking for exists—without needing trial-and-error anymore. You can build a sustainable travel life that works for your circumstances when you have the right blueprint.
+                        In this free training, you'll discover:
                     </p>
                     <ul class="ttt-cta-list">
                         <li>✅ The 4-step system for making travel sustainable (not just an occasional escape)</li>
