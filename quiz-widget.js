@@ -520,6 +520,7 @@
             font-weight: 800;
             min-width: 60px;
             text-align: right;
+            flex-shrink: 0;
         }
         .ttt-profile-toggle {
             width: 32px;
@@ -533,6 +534,7 @@
             transition: var(--transition);
             border: none;
             color: #fff;
+            flex-shrink: 0;
         }
         .ttt-profile-card.expanded .ttt-profile-toggle { transform: rotate(180deg); }
         .ttt-profile-bar {
