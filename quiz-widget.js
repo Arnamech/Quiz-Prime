@@ -1022,11 +1022,30 @@
         ]
     };
 
+    // Utility: Fisher-Yates shuffle (returns new array)
+    function shuffleArray(arr) {
+        const a = arr.slice();
+        for (let i = a.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [a[i], a[j]] = [a[j], a[i]];
+        }
+        return a;
+    }
+
+    // Generate shuffled display orders for every question
+    // Each entry maps display position → original option index
+    function generateShuffledOrders() {
+        return QUIZ_DATA.questions.map(q =>
+            shuffleArray(q.options.map((_, i) => i))
+        );
+    }
+
     // State Management
     let state = {
         user: { name: "", phone: "", email: "" },
         answers: Array(13).fill().map(() => []), // Array of arrays for multiple selections
         currentQuestion: 0,
+        shuffledOrders: [], // populated on quiz start
     };
 
     const STORAGE_KEY = 'ttt_quiz_state_v3';
@@ -1075,6 +1094,7 @@
         }
         state.answers = Array(13).fill().map(() => []);
         state.currentQuestion = 0;
+        state.shuffledOrders = generateShuffledOrders();
         if (keepUser) {
             saveState(); // Ensure the cleared answers/progress are saved, but user remains
         }
@@ -1444,6 +1464,7 @@
 
                 state.answers = Array(13).fill().map(() => []);
                 state.currentQuestion = 0;
+                state.shuffledOrders = generateShuffledOrders();
                 renderQuestion();
                 showView('ttt-view-quiz');
             }
@@ -1521,8 +1542,12 @@
 
         const isMulti = questionData.note && questionData.note.includes('Multiple');
 
-        questionData.options.forEach((opt, idx) => {
-            const isSelected = currentAnswer.includes(idx);
+        // Use shuffled display order (maps display position → original index)
+        const displayOrder = state.shuffledOrders[qIndex] || questionData.options.map((_, i) => i);
+
+        displayOrder.forEach(originalIdx => {
+            const opt = questionData.options[originalIdx];
+            const isSelected = currentAnswer.includes(originalIdx);
             const optDiv = document.createElement('div');
             optDiv.className = `ttt-option ${isSelected ? 'selected' : ''}`;
 
@@ -1532,13 +1557,13 @@
             `;
             optDiv.addEventListener('click', () => {
                 if (isMulti) {
-                    if (currentAnswer.includes(idx)) {
-                        state.answers[qIndex] = currentAnswer.filter(i => i !== idx);
+                    if (currentAnswer.includes(originalIdx)) {
+                        state.answers[qIndex] = currentAnswer.filter(i => i !== originalIdx);
                     } else {
-                        state.answers[qIndex].push(idx);
+                        state.answers[qIndex].push(originalIdx);
                     }
                 } else {
-                    state.answers[qIndex] = [idx]; // Single selection as array of one
+                    state.answers[qIndex] = [originalIdx]; // Single selection as array of one
                 }
                 renderQuestion();
             });
@@ -1636,7 +1661,7 @@
                 if (!stageFull) return;
 
                 profileCardsHTML += `
-                    <div class="ttt-profile-card ttt-stage-${res.id} ${isWinner ? 'expanded' : ''}" data-card-id="${res.id}">
+                    <div class="ttt-profile-card ttt-stage-${res.id} ${isWinner ? '' : 'expanded'}" data-card-id="${res.id}">
                         <div class="ttt-profile-header" onclick="this.parentElement.classList.toggle('expanded')">
                             <div class="ttt-profile-info">
                                 <div class="ttt-profile-stage-name">${stageFull.emoji} ${traitName(stageFull.id)}</div>
