@@ -1148,16 +1148,26 @@
             source: 'travel-archetype-quiz'
         };
 
-        // Format answers
+        // Format answers — each answer gets its own separate field
         let summaryParts = [];
         QUIZ_DATA.questions.forEach((q, idx) => {
             const selectedIndices = userAnswers[idx] || [];
-            const labels = selectedIndices.length > 0 ? selectedIndices.map(i => q.options[i].label).join(', ') : 'No answer';
+            const labels = selectedIndices.length > 0 ? selectedIndices.map(i => q.options[i].label) : [];
 
             payload[`question_${idx + 1}_text`] = q.text;
-            payload[`question_${idx + 1}_answer`] = labels;
 
-            summaryParts.push(`Q${idx + 1}: ${q.text}\nA: ${labels}`);
+            if (labels.length === 0) {
+                payload[`question_${idx + 1}_answer`] = 'No answer';
+            } else if (labels.length === 1) {
+                payload[`question_${idx + 1}_answer`] = labels[0];
+            } else {
+                // Multiple selections: each gets its own field
+                labels.forEach((label, ansIdx) => {
+                    payload[`question_${idx + 1}_answer_${ansIdx + 1}`] = label;
+                });
+            }
+
+            summaryParts.push(`Q${idx + 1}: ${q.text}\nA: ${labels.join(' | ') || 'No answer'}`);
         });
         payload['all_answers_summary'] = summaryParts.join('\n\n');
 
@@ -1172,36 +1182,17 @@
 
         // ─── 1. Webhook POST (Works natively with n8n, Zapier, Make, and GHL) ─
         if (TTT_CONFIG.webhookUrl) {
-            const isProxyPath = TTT_CONFIG.webhookUrl.startsWith('/');
-            const targetUrl = isProxyPath ? window.location.origin + TTT_CONFIG.webhookUrl : TTT_CONFIG.webhookUrl;
+            console.log('[TTT] Sending webhook to:', TTT_CONFIG.webhookUrl);
 
-            console.log('[TTT] Sending webhook to:', targetUrl, isProxyPath ? '(via Netlify proxy)' : '(direct)');
-
-            // If using Netlify proxy (/api/webhook), request is same-origin → use normal fetch with JSON
-            // If hitting external URL directly, use no-cors + text/plain to avoid CORS preflight blocks
-            const fetchOptions = isProxyPath
-                ? {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
-                }
-                : {
-                    method: 'POST',
-                    mode: 'no-cors',
-                    headers: { 'Content-Type': 'text/plain' },
-                    body: JSON.stringify(payload)
-                };
-
-            fetch(targetUrl, fetchOptions)
-                .then(res => {
-                    if (isProxyPath) {
-                        console.log('[TTT] Webhook sent via proxy, status:', res.status);
-                        if (!res.ok) console.warn('[TTT] Webhook proxy returned non-OK status:', res.status);
-                    } else {
-                        console.log('[TTT] Webhook "shot" successfully (mode: no-cors, response is opaque)');
-                    }
-                })
-                .catch(err => console.warn('[TTT] Webhook failed:', err));
+            fetch(TTT_CONFIG.webhookUrl, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            })
+            .then(res => {
+                if (!res.ok) console.warn('[TTT] Webhook returned non-OK status:', res.status);
+            })
+            .catch(err => console.warn('[TTT] Webhook failed:', err));
         } else {
             console.warn('[TTT] No webhookUrl configured.');
         }
@@ -1446,11 +1437,9 @@
                             source: 'travel-archetype-quiz',
                             timestamp: new Date().toISOString()
                         };
-                        const isProxy = signupUrl.startsWith('/');
-                        fetch(isProxy ? window.location.origin + signupUrl : signupUrl, {
+                        fetch(TTT_CONFIG.signupWebhookUrl, {
                             method: 'POST',
-                            headers: { 'Content-Type': isProxy ? 'application/json' : 'text/plain' },
-                            mode: isProxy ? 'cors' : 'no-cors',
+                            headers: { 'Content-Type': 'application/json' },
                             body: JSON.stringify(leadPayload)
                         }).then(res => {
                             console.log('[TTT] Sign-up webhook sent:', res.status);
