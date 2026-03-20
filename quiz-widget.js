@@ -1148,26 +1148,16 @@
             source: 'travel-archetype-quiz'
         };
 
-        // Format answers — each answer gets its own separate field
+        // Format answers — questions with multiple answers share a string separated by a pipe
         let summaryParts = [];
         QUIZ_DATA.questions.forEach((q, idx) => {
             const selectedIndices = userAnswers[idx] || [];
-            const labels = selectedIndices.length > 0 ? selectedIndices.map(i => q.options[i].label) : [];
+            const labels = selectedIndices.length > 0 ? selectedIndices.map(i => q.options[i].label).join(' | ') : 'No answer';
 
             payload[`question_${idx + 1}_text`] = q.text;
+            payload[`question_${idx + 1}_answer`] = labels;
 
-            if (labels.length === 0) {
-                payload[`question_${idx + 1}_answer`] = 'No answer';
-            } else if (labels.length === 1) {
-                payload[`question_${idx + 1}_answer`] = labels[0];
-            } else {
-                // Multiple selections: each gets its own field
-                labels.forEach((label, ansIdx) => {
-                    payload[`question_${idx + 1}_answer_${ansIdx + 1}`] = label;
-                });
-            }
-
-            summaryParts.push(`Q${idx + 1}: ${q.text}\nA: ${labels.join(' | ') || 'No answer'}`);
+            summaryParts.push(`Q${idx + 1}: ${q.text}\nA: ${labels}`);
         });
         payload['all_answers_summary'] = summaryParts.join('\n\n');
 
