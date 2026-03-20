@@ -813,6 +813,32 @@
         }
         .ttt-step-number { font-weight: 800; color: var(--primary); font-size: 1.125rem; }
         .ttt-step-text { font-size: 0.9375rem; color: var(--text-main); line-height: 1.5; }
+
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            .ttt-profile-header {
+                padding: var(--sp-sm) var(--sp-md);
+                gap: 8px;
+            }
+            .ttt-profile-stage-name {
+                font-size: 0.9375rem;
+                align-items: flex-start;
+            }
+            .ttt-profile-stage-sub {
+                font-size: 0.75rem;
+            }
+            .ttt-profile-pct {
+                font-size: 1.25rem;
+                min-width: 45px;
+            }
+            .ttt-profile-toggle {
+                width: 28px;
+                height: 28px;
+            }
+            .ttt-profile-bar {
+                margin: 0 var(--sp-md) var(--sp-sm);
+            }
+        }
     `;
     document.head.appendChild(style);
 
