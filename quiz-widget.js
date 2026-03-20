@@ -1437,9 +1437,11 @@
                             source: 'travel-archetype-quiz',
                             timestamp: new Date().toISOString()
                         };
-                        fetch(TTT_CONFIG.signupWebhookUrl, {
+                        const isProxy = signupUrl.startsWith('/');
+                        fetch(isProxy ? window.location.origin + signupUrl : signupUrl, {
                             method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
+                            headers: { 'Content-Type': isProxy ? 'application/json' : 'text/plain' },
+                            mode: isProxy ? 'cors' : 'no-cors',
                             body: JSON.stringify(leadPayload)
                         }).then(res => {
                             console.log('[TTT] Sign-up webhook sent:', res.status);
