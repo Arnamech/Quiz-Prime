@@ -149,6 +149,24 @@
             display: none;
         }
 
+        .ttt-chk-group {
+            margin-bottom: var(--sp-md);
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+        .ttt-chk-group input[type="checkbox"] {
+            margin-top: 4px;
+            width: 16px;
+            height: 16px;
+            accent-color: var(--primary);
+            flex-shrink: 0;
+            cursor: pointer;
+        }
+
         /* Buttons */
         .ttt-btn {
             background: linear-gradient(135deg, #eaaa1a 0%, #f9c632 100%);
@@ -1302,10 +1320,22 @@
                     </div>
 
                     <div class="ttt-form-group">
-                        <label class="ttt-label" for="ttt-phone">Phone Number</label>
-                        <input type="tel" id="ttt-phone" class="ttt-input" inputmode="tel" placeholder="e.g. +61 412 345 678" autocomplete="tel">
+                        <label class="ttt-label" for="ttt-phone">Phone Number <span style="color:var(--error)">*</span></label>
+                        <input type="tel" id="ttt-phone" class="ttt-input" inputmode="tel" placeholder="e.g. +61 412 345 678" autocomplete="tel" required>
                         <div class="ttt-error-msg" id="ttt-err-phone">Please enter a valid phone number</div>
                     </div>
+
+                    <div class="ttt-chk-group">
+                        <input type="checkbox" id="ttt-consent-1" required>
+                        <label for="ttt-consent-1">By checking this box, I consent to receive non-marketing text messages from <strong>Travel to Transform</strong>. Message frequency varies, message &amp; data rates may apply. Text HELP for assistance, reply STOP to opt out. <span style="color:var(--error)">*</span></label>
+                    </div>
+                    <div class="ttt-error-msg" id="ttt-err-consent-1" style="margin-top: -12px; margin-bottom: 12px; margin-left: 28px;">This field is required</div>
+
+                    <div class="ttt-chk-group">
+                        <input type="checkbox" id="ttt-consent-2" required>
+                        <label for="ttt-consent-2">By checking this box, I consent to receive marketing and promotional messages including special offers, discounts, new product updates among others from <strong>Travel to Transform</strong> at the phone number provided. Frequency may vary. Message &amp; data rates may apply. Text HELP for assistance, reply STOP to opt out. <span style="color:var(--error)">*</span></label>
+                    </div>
+                    <div class="ttt-error-msg" id="ttt-err-consent-2" style="margin-top: -12px; margin-bottom: 20px; margin-left: 28px;">This field is required</div>
 
                     <button class="ttt-btn" id="ttt-btn-start">Begin the Quiz</button>
                 </div>
@@ -1418,18 +1448,42 @@
 
             const phoneVal = phoneInput.value.trim();
             const digitsOnly = phoneVal.replace(/[^0-9]/g, '');
-            // Validate: if provided, must have 7+ digits and only contain digits, +, spaces, dashes, parentheses
-            if (phoneVal && !/^[+]?[\d\s\-()]+$/.test(phoneVal)) {
+            // Validate: must have 7+ digits and only contain digits, +, spaces, dashes, parentheses
+            if (!phoneVal) {
                 phoneInput.classList.add('invalid');
+                document.getElementById('ttt-err-phone').innerText = 'Please enter a valid phone number';
                 document.getElementById('ttt-err-phone').style.display = 'block';
                 isValid = false;
-            } else if (phoneVal && digitsOnly.length < 7) {
+            } else if (!/^[+]?[\d\s\-()]+$/.test(phoneVal)) {
                 phoneInput.classList.add('invalid');
+                document.getElementById('ttt-err-phone').innerText = 'Please enter a valid phone number';
+                document.getElementById('ttt-err-phone').style.display = 'block';
+                isValid = false;
+            } else if (digitsOnly.length < 7) {
+                phoneInput.classList.add('invalid');
+                document.getElementById('ttt-err-phone').innerText = 'Please enter a valid phone number';
                 document.getElementById('ttt-err-phone').style.display = 'block';
                 isValid = false;
             } else {
                 phoneInput.classList.remove('invalid');
                 document.getElementById('ttt-err-phone').style.display = 'none';
+            }
+
+            const consent1 = document.getElementById('ttt-consent-1');
+            const consent2 = document.getElementById('ttt-consent-2');
+            
+            if (!consent1.checked) {
+                document.getElementById('ttt-err-consent-1').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('ttt-err-consent-1').style.display = 'none';
+            }
+
+            if (!consent2.checked) {
+                document.getElementById('ttt-err-consent-2').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('ttt-err-consent-2').style.display = 'none';
             }
 
             if (isValid) {
@@ -1500,6 +1554,15 @@
                 e.target.classList.remove('invalid');
                 document.getElementById(`ttt-err-${field}`).style.display = 'none';
             });
+        });
+
+        ['consent-1', 'consent-2'].forEach(field => {
+            const el = document.getElementById(`ttt-${field}`);
+            if(el) {
+                el.addEventListener('change', (e) => {
+                    document.getElementById(`ttt-err-${field}`).style.display = 'none';
+                });
+            }
         });
 
         // Allow only phone-valid characters: digits, +, spaces, dashes, parentheses
